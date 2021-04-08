@@ -1,0 +1,71 @@
+﻿@model Assignment1.Models.Technicians
+
+@section header{
+    <form method="post">
+        <!--This line for validation after put [required] in Category controller-->
+
+        <div class="form-group row">
+            <h2 class="text-info pl-03"> Delete Product</h2>
+            <br />
+        </div>
+        <p class="text-danger">Do you really want to delete: </p>
+        <div class="row">
+            <div class="col-8">
+                <input type="hidden" asp-for="TechniciansId" />
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="TName">Name</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="TName" class="form-control" readonly />
+                        <!--Check validation here from model-->
+                        <span asp-validation-for="TName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Email">Email</label>
+
+                    </div>
+                    <div class="col-8">
+                        <!-- using asp-for to post value to database, other pasge...-->
+                        <input type="text" asp-for="Email" class="form-control" readonly />
+                        <!--Check validation here from model-->
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Phone">Phone</label>
+
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="Phone" class="form-control" readonly />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <table class="col-8 offset-4 row">
+                            <tr class=" col">
+
+                                <td> <input type="submit" class="btn btn-outline-danger w=100 text-right" value="Delete" /></td>
+                                <td><a asp-action="Index" class="btn btn-outline-success w=140 text-right"> Cancel</a></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </form>
+
+}

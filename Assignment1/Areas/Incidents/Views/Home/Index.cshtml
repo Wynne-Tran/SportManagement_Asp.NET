@@ -1,0 +1,58 @@
+﻿
+@model IEnumerable<Assignment1.Models.Incidents>
+@{
+    ViewData["Title"] = "Incident";
+}
+<div class="Incidents-container p-3">
+    <div class="box">
+        <span></span>
+        <div class="content">
+            <h2> Incidents Manager</h2>
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-bordered" table-striped style="width:100%">
+                    <thead>
+                        <tr>
+                            <th><p>TITLE</p></th>
+                            <th><p>CUSTOMER</p></th>
+                            <th><p>PRODUCT</p></th>
+                            <th><p>DAY OPENED</p></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var obj in Model)
+                        {
+                            <tr>
+                                <td class=" text-center">@obj.Title</td>
+                                <td class=" text-center">@obj.Customers.FullName</td>
+                                <td class=" text-center">@obj.Product.PName</td>
+                                <td class=" text-center">@obj.DateAdded.ToShortDateString()</td>
+                                <td class=" text-center">
+                                    <div>
+                                        <a asp-controller="Home" asp-route-Id="@obj.IncidentsId" asp-action="Edit" class="btn btn-outline-primary">Edit</a>
+
+                                    </div>
+                                </td>
+                                <td class=" text-center">
+                                    <div>
+
+                                        <a asp-controller="Home" asp-route-Id="@obj.IncidentsId" asp-action="Delete" class="btn btn-outline-danger ">Delete</a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <div class="col-6 ">
+                    <a asp-controller="Home" asp-action="Create" class="btn btn-outline-success">
+                        Add Incident
+                    </a>
+                </div>
+            }
+     </div>
+    </div>
+    </div>
+

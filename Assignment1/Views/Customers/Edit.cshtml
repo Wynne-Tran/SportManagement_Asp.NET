@@ -1,0 +1,144 @@
+﻿@model Assignment1.Models.Customers
+
+@{
+    string title = ViewBag.Action + " Customer";
+    ViewBag.Title = title;
+}
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+    <script>
+        $(function () {
+
+            $("#PhoneNumber").mask("(999) 999-9999");
+        });
+
+    </script>
+}
+@section header{
+    <h2>@title</h2>
+
+    <form method="post">
+        <!--This line for validation after put [required] in Category controller-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-8">
+                <input type="hidden" asp-for="CustomersId" />
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="FirstName">First Name</label>
+                    </div>
+
+                    <div class="col-8">
+                        <input type="text" asp-for="FirstName"
+                               class="form-control"/>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="LastName">Last Name</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="LastName" class="form-control" />
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Address">Address</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="City">City</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="State">State</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="State" class="form-control" />
+                        <span asp-validation-for="State" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="PostalCode">PostalCode</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="PostalCode" class="form-control" />
+                        <span asp-validation-for="PostalCode" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="CountryId">Country</label>
+                    </div>
+                    <div class="col-8">
+                        <select asp-for="CountryId"
+                                class="form-control"
+                                asp-items="@(new SelectList(ViewBag.Country, "CountryId" , "CountryName"))">
+                            <option value="">select a country</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Email">Email</label>
+
+                    </div>
+                    <div class="col-8">
+                        <!-- using asp-for to post value to database, other pasge...-->
+                        <input type="text" asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="PhoneNumber">Phone</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="PhoneNumber" class="form-control" />
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <table class="col-8 offset-4 row">
+                            <tr class=" col">
+
+                                <td> <input type="submit" class="btn btn-outline-info w=100 text-right" value="Save" /></td>
+                                <td><a asp-action="Index" class="btn btn-outline-success w=140 text-right"> Cancel</a></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+}

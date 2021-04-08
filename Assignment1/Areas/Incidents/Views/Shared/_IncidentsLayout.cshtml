@@ -1,0 +1,36 @@
+﻿@{
+    Layout = "_Layout";
+
+}
+@{
+    string area =ViewContext.RouteData.Values["area"].ToString();
+
+}
+
+@section header{
+
+    <nav>
+        <ul class="nav nav-pills nav-fill footer">
+            <li class="nav-item @(area == "incidents" && TempData["Filter"] == "home" ? "active1" : "")">
+                <a class="nav-link" aria-current="page" asp-action="Index">All Incidents</a>
+            </li>
+            <li class="nav-item @(TempData["Filter"] == "unassigned" ? "active1" : "")">
+                <a class="nav-link" asp-route-Filter="unassigned" asp-controller="Home" asp-action="Index">Unassigned Incidents</a>
+            </li>
+            <li class="nav-item @(TempData["Filter"] == "opendate" ? "active1" : "")">
+                <a class="nav-link" asp-route-Filter="opendate" asp-controller="Home" asp-action="Index">Open Incidents</a>
+            </li>
+        </ul>
+
+
+
+    </nav>
+
+}
+<div class="container">
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+

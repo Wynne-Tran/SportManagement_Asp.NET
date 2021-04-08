@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\wynnetran\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\wynnetran\\.nuget\\packages"
+    ]
+  }
+}

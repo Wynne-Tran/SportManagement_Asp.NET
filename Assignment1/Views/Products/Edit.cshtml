@@ -1,0 +1,88 @@
+﻿@model Assignment1.Models.Products
+
+@{
+    string title = ViewBag.Action + " Products";
+    ViewBag.Title = title;
+}
+
+
+@section header{
+
+    <h2>@title</h2>
+
+    <form method="post">
+        <!--This line for validation after put [required] in Category controller-->
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-8">
+                <input type="hidden" asp-for="ProductsId" />
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Code">Code</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="Code" class="form-control" />
+                        <!--Check validation here from model-->
+                        <span asp-validation-for="Code" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="PName">Name</label>
+
+                    </div>
+                    <div class="col-8">
+                        <!-- using asp-for to post value to database, other pasge...-->
+                        <input type="text" asp-for="PName" class="form-control" />
+                        <!--Check validation here from model-->
+                        <span asp-validation-for="PName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Price">Price</label>
+
+                    </div>
+                    <div class="col-8">
+                        <input type="text" asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="Rdate">Release Date</label>
+
+                    </div>
+                    <div class="col-8">
+                        <!-- using asp-for to post value to database, other pasge...-->
+                        <input type="text" asp-for="Rdate" class="form-control" />
+                        <!--Check validation here from model-->
+                        <span asp-validation-for="Rdate" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-8 offset-4 row">
+                        <table class="col-8 offset-4 row">
+                            <tr class=" col">
+
+                                <td> <input type="submit" class="btn btn-outline-info w=100 text-right" value="Save" /></td>
+                                <td><a asp-action="Index" class="btn btn-outline-success w=140 text-right"> Cancel</a></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </form>
+
+}

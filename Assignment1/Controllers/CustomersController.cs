@@ -49,15 +49,18 @@ namespace Assignment1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Customers obj)
         {
-            
-            if (ModelState.IsValid)
+            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email)))
             {
-                _db.Customers.Add(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index", "Customers");
+                if (ModelState.IsValid)
+                {
+                    _db.Customers.Add(obj);
+                    _db.SaveChanges();
+                    return RedirectToAction("Index", "Customers");
+                }
             }
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
             ViewBag.Action = "Create";
+            ViewBag.duplicate = "Email was available";
             return View("Edit");
         }
 

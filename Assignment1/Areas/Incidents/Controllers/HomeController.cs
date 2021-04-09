@@ -87,18 +87,13 @@ namespace Assignment1.Areas.Incident.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(Incidents obj)
         {
             listTable();
-            if (ModelState.IsValid)
-            {
-                _db.Incidents.Add(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
-            }
             ViewBag.Action = "Create";
-            return View("Edit");
+            _db.Incidents.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -134,7 +129,7 @@ namespace Assignment1.Areas.Incident.Controllers
         {
             _db.Incidents.Remove(obj);
             _db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
        

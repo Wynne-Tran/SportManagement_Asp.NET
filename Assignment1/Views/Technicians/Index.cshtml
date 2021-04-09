@@ -29,7 +29,7 @@
                                 <tr>
                                     <td>@obj.TName</td>
                                     <td>@obj.Email</td>
-                                    <td>@string.Format("{0}-{1}-{2}", obj.Phone.Substring(0, 3), obj.Phone.Substring(3, 3), obj.Phone.Substring(6, 4))</td>
+                                    <td>@obj.Phone</td>
                                     <td class=" text-center">
                                         <div>
                                             <a asp-controller="Technicians" asp-route-Id="@obj.TechniciansId" asp-action="Edit" class="btn btn-outline-primary">Edit</a>

@@ -17,7 +17,6 @@ namespace Assignment1.Models
         public string Description { get; set; }
         [Required(ErrorMessage = "Please enter a date added!")]
         public DateTime DateAdded { get; set; }
-        
         public DateTime? DateClosed { get; set; }
 
        

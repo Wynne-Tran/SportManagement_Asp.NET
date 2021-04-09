@@ -58,7 +58,7 @@ namespace Assignment1.Models
                     TechniciansId = 1,
                     TName = "Wynne Tran",
                     Email = "thihoangtram.tran@georgebrown.ca",
-                    Phone = "4167221285"
+                    Phone = "(041) 672-6767"
                 }
                 );
 
@@ -68,7 +68,7 @@ namespace Assignment1.Models
                     TechniciansId = 2,
                     TName = "Forough Kiani",
                     Email = "kiani.forough@georgebrown.ca",
-                    Phone = "4167686868"
+                    Phone = "(041) 672-6868"
                 }
                 );
 
@@ -78,7 +78,7 @@ namespace Assignment1.Models
                     TechniciansId = 3,
                     TName = "Matias Herter",
                     Email = "matias.herter@georgebrown.ca",
-                    Phone = "4167999888"
+                    Phone = "(041) 672-8888"
                 }
                 );
 

@@ -124,12 +124,12 @@ namespace Assignment1.Areas.Incident.Controllers
 
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Delete(Incidents obj)
         {
-            _db.Incidents.Remove(obj);
+            var newobj = _db.Incidents.Find(obj.IncidentsId);
+            _db.Incidents.Remove(newobj);
             _db.SaveChanges();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index");
         }
 
        

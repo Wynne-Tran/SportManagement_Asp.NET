@@ -71,15 +71,18 @@ namespace Assignment1.Controllers
         {
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
 
-            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email)) && _db.Customers.Any(a => a.CustomersId == obj.CustomersId) && ModelState.IsValid)
+            ViewBag.Action = "Edit";
+            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email) && a.CustomersId == obj.CustomersId)){
+                ViewBag.duplicate = "The email is already registered!";
+                return View("Edit");
+            }
+            if (ModelState.IsValid)
             {
                 _db.Customers.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index", "Customers");
             }
-          
-            ViewBag.Action = "Edit";
-            ViewBag.duplicate = "The email is already registered!";
+            
             return View("Edit");
         }
 

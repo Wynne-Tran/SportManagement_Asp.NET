@@ -70,13 +70,17 @@ namespace Assignment1.Controllers
         public IActionResult Edit(Customers obj)
         {
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
-            if (ModelState.IsValid)
+            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email)))
             {
-                _db.Customers.Update(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index", "Customers");
+                if (ModelState.IsValid)
+                {
+                    _db.Customers.Update(obj);
+                    _db.SaveChanges();
+                    return RedirectToAction("Index", "Customers");
+                }
             }
             ViewBag.Action = "Edit";
+            ViewBag.duplicate = "Email was available";
             return View("Edit");
         }
 

@@ -207,8 +207,8 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 1,
                             CustomersId = 1,
-                            DateAdded = new DateTime(2021, 4, 8, 21, 7, 37, 808, DateTimeKind.Local).AddTicks(4971),
-                            DateClosed = new DateTime(2021, 4, 8, 21, 7, 37, 808, DateTimeKind.Local).AddTicks(5384),
+                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(4769),
+                            DateClosed = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(5148),
                             Description = "Got 100 for this assignment",
                             ProductsId = 1,
                             TechniciansId = 1,
@@ -218,7 +218,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 2,
                             CustomersId = 2,
-                            DateAdded = new DateTime(2021, 4, 8, 21, 7, 37, 808, DateTimeKind.Local).AddTicks(7278),
+                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(6234),
                             Description = "Some errors happen !",
                             ProductsId = 2,
                             TechniciansId = 2,
@@ -228,7 +228,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 3,
                             CustomersId = 3,
-                            DateAdded = new DateTime(2021, 4, 8, 21, 7, 37, 808, DateTimeKind.Local).AddTicks(7316),
+                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(6257),
                             Description = "Some errors happen !",
                             ProductsId = 3,
                             Title = "Could not install"
@@ -267,7 +267,7 @@ namespace Assignment1.Migrations
                             Code = "LEAG10",
                             PName = "League Scheduler 1.0",
                             Price = 4.99m,
-                            Rdate = new DateTime(2021, 4, 8, 21, 7, 37, 805, DateTimeKind.Local).AddTicks(9948)
+                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 632, DateTimeKind.Local).AddTicks(8438)
                         },
                         new
                         {
@@ -275,7 +275,7 @@ namespace Assignment1.Migrations
                             Code = "LEAGD10",
                             PName = "League Scheduler Deluxe 1.0",
                             Price = 7.99m,
-                            Rdate = new DateTime(2021, 4, 8, 21, 7, 37, 807, DateTimeKind.Local).AddTicks(3031)
+                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 633, DateTimeKind.Local).AddTicks(9851)
                         },
                         new
                         {
@@ -283,7 +283,7 @@ namespace Assignment1.Migrations
                             Code = "DRAFT10",
                             PName = "Draft Manager 10",
                             Price = 4.99m,
-                            Rdate = new DateTime(2021, 4, 8, 21, 7, 37, 807, DateTimeKind.Local).AddTicks(3127)
+                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 633, DateTimeKind.Local).AddTicks(9933)
                         });
                 });
 
@@ -357,21 +357,21 @@ namespace Assignment1.Migrations
                         {
                             TechniciansId = 1,
                             Email = "thihoangtram.tran@georgebrown.ca",
-                            Phone = "4167221285",
+                            Phone = "(041) 672-6767",
                             TName = "Wynne Tran"
                         },
                         new
                         {
                             TechniciansId = 2,
                             Email = "kiani.forough@georgebrown.ca",
-                            Phone = "4167686868",
+                            Phone = "(041) 672-6868",
                             TName = "Forough Kiani"
                         },
                         new
                         {
                             TechniciansId = 3,
                             Email = "matias.herter@georgebrown.ca",
-                            Phone = "4167999888",
+                            Phone = "(041) 672-8888",
                             TName = "Matias Herter"
                         });
                 });

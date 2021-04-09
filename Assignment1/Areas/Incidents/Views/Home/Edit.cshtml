@@ -8,7 +8,7 @@
 
 <form method="post">
     <!--This line for validation after put [required] in Category controller-->
-    <div asp-validation-summary="All" class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="row">
         <div class="col-8">
             @if (ViewBag.Action == "Edit")

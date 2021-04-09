@@ -75,7 +75,7 @@ namespace Assignment1.Controllers
 
 
         [HttpPost]
-       
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(Incidents obj)
         {
             if (ModelState.IsValid)
@@ -87,7 +87,7 @@ namespace Assignment1.Controllers
             // call session for return List page
             //read session
             int? id = HttpContext.Session.GetInt32("TechId");
-            return View("Edit", id);
+            return View("Edit", obj);
         }
 
     }

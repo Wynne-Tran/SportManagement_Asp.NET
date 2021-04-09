@@ -160,9 +160,9 @@ namespace Assignment1.Migrations
                 columns: new[] { "ProductsId", "Code", "PName", "Price", "Rdate" },
                 values: new object[,]
                 {
-                    { 1, "LEAG10", "League Scheduler 1.0", 4.99m, new DateTime(2021, 4, 9, 1, 47, 17, 319, DateTimeKind.Local).AddTicks(1912) },
-                    { 2, "LEAGD10", "League Scheduler Deluxe 1.0", 7.99m, new DateTime(2021, 4, 9, 1, 47, 17, 320, DateTimeKind.Local).AddTicks(1961) },
-                    { 3, "DRAFT10", "Draft Manager 10", 4.99m, new DateTime(2021, 4, 9, 1, 47, 17, 320, DateTimeKind.Local).AddTicks(2042) }
+                    { 1, "LEAG10", "League Scheduler 1.0", 4.99m, new DateTime(2021, 4, 9, 13, 53, 36, 269, DateTimeKind.Local).AddTicks(2240) },
+                    { 2, "LEAGD10", "League Scheduler Deluxe 1.0", 7.99m, new DateTime(2021, 4, 9, 13, 53, 36, 270, DateTimeKind.Local).AddTicks(6916) },
+                    { 3, "DRAFT10", "Draft Manager 10", 4.99m, new DateTime(2021, 4, 9, 13, 53, 36, 270, DateTimeKind.Local).AddTicks(7024) }
                 });
 
             migrationBuilder.InsertData(
@@ -195,9 +195,9 @@ namespace Assignment1.Migrations
                 columns: new[] { "IncidentsId", "CustomersId", "DateAdded", "DateClosed", "Description", "ProductsId", "TechniciansId", "Title" },
                 values: new object[,]
                 {
-                    { 1, 1, new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(2117), new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(2486), "Got 100 for this assignment", 1, 1, "Congratulation !" },
-                    { 2, 2, new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(3496), null, "Some errors happen !", 2, 2, "Could not install" },
-                    { 3, 3, new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(3516), null, "Some errors happen !", 3, null, "Could not install" }
+                    { 1, 1, new DateTime(2021, 4, 9, 13, 53, 36, 272, DateTimeKind.Local).AddTicks(498), new DateTime(2021, 4, 9, 13, 53, 36, 272, DateTimeKind.Local).AddTicks(979), "Got 100 for this assignment", 1, 1, "Congratulation !" },
+                    { 2, 2, new DateTime(2021, 4, 9, 13, 53, 36, 272, DateTimeKind.Local).AddTicks(2343), null, "Some errors happen !", 2, 2, "Could not install" },
+                    { 3, 3, new DateTime(2021, 4, 9, 13, 53, 36, 272, DateTimeKind.Local).AddTicks(2372), null, "Some errors happen !", 3, null, "Could not install" }
                 });
 
             migrationBuilder.InsertData(

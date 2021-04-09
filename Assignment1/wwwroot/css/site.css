@@ -31,7 +31,7 @@ p {
 }
 
 .footer {
-    height: auto;
+    height: 50px;
     width: 100%;
 }
 
@@ -44,7 +44,7 @@ p {
 }
 
 .outer button, .outerf footer {
-    background: #000;
+    background: #111;
     color: #f2f2f2;
     outline: none;
     border: none;
@@ -70,6 +70,7 @@ p {
     width: 100%;
     background: #111;
     margin-top: 5px;
+    text-align:center;
 }
 
 

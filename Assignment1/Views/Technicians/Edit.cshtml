@@ -4,6 +4,17 @@
     string title = ViewBag.Action + " Technician";
     ViewBag.Title = title;
 }
+@section scripts{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+
+    <script>
+        $(function () {
+
+            $("#Phone").mask("(999) 999-9999");
+        });
+
+    </script>
+}
 
 @section header{
 
@@ -21,7 +32,7 @@
                         <label asp-for="TName">Name</label>
                     </div>
                     <div class="col-8">
-                        <input type="text" asp-for="TName" class="form-control"/>
+                        <input type="text" asp-for="TName" class="form-control" />
                         <!--Check validation here from model-->
                         <span asp-validation-for="TName" class="text-danger"></span>
                     </div>

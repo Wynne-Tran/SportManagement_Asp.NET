@@ -54,7 +54,7 @@ namespace Assignment1.Controllers
             {
                 _db.Customers.Add(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Customers");
             }
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
             ViewBag.Action = "Create";
@@ -71,7 +71,7 @@ namespace Assignment1.Controllers
             {
                 _db.Customers.Update(obj);
                 _db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Customers");
             }
             ViewBag.Action = "Edit";
             return View("Edit");

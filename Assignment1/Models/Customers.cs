@@ -23,7 +23,6 @@ namespace Assignment1.Models
         [Required]
         public string PostalCode { get; set; }
         public int CountryId { get; set; }
-        [Required(ErrorMessage = "Please enter a country!")]
         public Countries Country { get; set; }
         [Required]
         [EmailAddress(ErrorMessage = "Please enter a valid email!")]

@@ -13,8 +13,7 @@ namespace Assignment1.Models
         [Required(ErrorMessage = "Please enter an Email!")]
         [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Please enter technician phone!")]
-        [StringLength(10)]
+        [Required(ErrorMessage = "Please enter technician phone, it must be in (999) 999-9999 format")]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 

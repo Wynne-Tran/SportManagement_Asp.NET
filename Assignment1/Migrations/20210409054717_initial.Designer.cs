@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assignment1.Migrations
 {
     [DbContext(typeof(ProductsContext))]
-    [Migration("20210409031418_initial")]
+    [Migration("20210409054717_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -209,8 +209,8 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 1,
                             CustomersId = 1,
-                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(4769),
-                            DateClosed = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(5148),
+                            DateAdded = new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(2117),
+                            DateClosed = new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(2486),
                             Description = "Got 100 for this assignment",
                             ProductsId = 1,
                             TechniciansId = 1,
@@ -220,7 +220,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 2,
                             CustomersId = 2,
-                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(6234),
+                            DateAdded = new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(3496),
                             Description = "Some errors happen !",
                             ProductsId = 2,
                             TechniciansId = 2,
@@ -230,7 +230,7 @@ namespace Assignment1.Migrations
                         {
                             IncidentsId = 3,
                             CustomersId = 3,
-                            DateAdded = new DateTime(2021, 4, 8, 23, 14, 17, 635, DateTimeKind.Local).AddTicks(6257),
+                            DateAdded = new DateTime(2021, 4, 9, 1, 47, 17, 321, DateTimeKind.Local).AddTicks(3516),
                             Description = "Some errors happen !",
                             ProductsId = 3,
                             Title = "Could not install"
@@ -269,7 +269,7 @@ namespace Assignment1.Migrations
                             Code = "LEAG10",
                             PName = "League Scheduler 1.0",
                             Price = 4.99m,
-                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 632, DateTimeKind.Local).AddTicks(8438)
+                            Rdate = new DateTime(2021, 4, 9, 1, 47, 17, 319, DateTimeKind.Local).AddTicks(1912)
                         },
                         new
                         {
@@ -277,7 +277,7 @@ namespace Assignment1.Migrations
                             Code = "LEAGD10",
                             PName = "League Scheduler Deluxe 1.0",
                             Price = 7.99m,
-                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 633, DateTimeKind.Local).AddTicks(9851)
+                            Rdate = new DateTime(2021, 4, 9, 1, 47, 17, 320, DateTimeKind.Local).AddTicks(1961)
                         },
                         new
                         {
@@ -285,7 +285,7 @@ namespace Assignment1.Migrations
                             Code = "DRAFT10",
                             PName = "Draft Manager 10",
                             Price = 4.99m,
-                            Rdate = new DateTime(2021, 4, 8, 23, 14, 17, 633, DateTimeKind.Local).AddTicks(9933)
+                            Rdate = new DateTime(2021, 4, 9, 1, 47, 17, 320, DateTimeKind.Local).AddTicks(2042)
                         });
                 });
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wynnetran\\Source\\Repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj": {}
+    "C:\\Users\\wynnetran\\source\\repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wynnetran\\Source\\Repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj": {
+    "C:\\Users\\wynnetran\\source\\repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wynnetran\\Source\\Repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj",
+        "projectUniqueName": "C:\\Users\\wynnetran\\source\\repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj",
         "projectName": "Assignment1",
-        "projectPath": "C:\\Users\\wynnetran\\Source\\Repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj",
+        "projectPath": "C:\\Users\\wynnetran\\source\\repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\Assignment1.csproj",
         "packagesPath": "C:\\Users\\wynnetran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wynnetran\\Source\\Repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\obj\\",
+        "outputPath": "C:\\Users\\wynnetran\\source\\repos\\SportPro_WebAppication_Asp.NetCore\\Assignment1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\wynnetran\\AppData\\Roaming\\NuGet\\NuGet.Config",

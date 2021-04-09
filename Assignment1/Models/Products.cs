@@ -16,7 +16,7 @@ namespace Assignment1.Models
         [Required(ErrorMessage = "Please enter a product name!")]
         public string PName { get; set; }
         [Required]
-        [Range(0, 1000000, ErrorMessage = "Price have to larger than 0.00")]
+        [Range(0.01, 1000000, ErrorMessage = "Price have to larger than 0.00")]
         public decimal Price { get; set; } = 0.00M;
         [Required(ErrorMessage = "Please enter a RDate!")]
         public DateTime Rdate { get; set; } = DateTime.Now;

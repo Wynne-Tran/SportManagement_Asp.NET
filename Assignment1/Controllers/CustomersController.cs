@@ -60,7 +60,7 @@ namespace Assignment1.Controllers
             }
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
             ViewBag.Action = "Create";
-            ViewBag.duplicate = "Email was available";
+            ViewBag.duplicate = "The email is already registered!";
             return View("Edit");
         }
 
@@ -70,17 +70,16 @@ namespace Assignment1.Controllers
         public IActionResult Edit(Customers obj)
         {
             ViewBag.Country = _db.Country.OrderBy(g => g.CountryName).ToList();
-            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email)))
+
+            if (!_db.Customers.Any(a => a.Email.Equals(obj.Email)) && _db.Customers.Any(a => a.CustomersId == obj.CustomersId) && ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    _db.Customers.Update(obj);
-                    _db.SaveChanges();
-                    return RedirectToAction("Index", "Customers");
-                }
+                _db.Customers.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Customers");
             }
+          
             ViewBag.Action = "Edit";
-            ViewBag.duplicate = "Email was available";
+            ViewBag.duplicate = "The email is already registered!";
             return View("Edit");
         }
 

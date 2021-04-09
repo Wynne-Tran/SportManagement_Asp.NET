@@ -15,11 +15,12 @@ namespace Assignment1.Models
         public string Title { get; set; }
         [Required(ErrorMessage = "Please enter a description!")]
         public string Description { get; set; }
-        [Required(ErrorMessage = "Please enter a date added!")]
+
+        [Required(ErrorMessage = "Please enter a day open!")]
         public DateTime DateAdded { get; set; }
         public DateTime? DateClosed { get; set; }
 
-       
+        [Required(ErrorMessage = "Please choice a customer")]
         public int CustomersId { get; set; }
         public Customers Customers { get; set; }
 

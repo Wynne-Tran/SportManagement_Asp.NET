@@ -17,7 +17,7 @@ Encapsulate the data layer
 
 Full Project Demo: 
 
-https://studio.youtube.com/video/HkTnEBrLfrc/edit
+https://www.youtube.com/watch?v=HkTnEBrLfrc
 
               
 # 🪐 Contact Author

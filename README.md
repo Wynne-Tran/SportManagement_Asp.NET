@@ -3,7 +3,10 @@
 Implement CRUD Functionality
 
 The GBC Sporting Technical Support website consists of web pages that support two types of users.
-Improve URLs for the application Improve the Razor Views
+It lets administrators manage the products, technicians, customers, incidents, and product registrations that are in the database.
+It lets technicians update incidents that have been assigned to them.
+Improve URLs for the application 
+Improve the Razor Views
 Use TempData to display messages
 Add filtering to page
 Improve validation
